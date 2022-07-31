@@ -1,14 +1,16 @@
-const shellCommands = [
-    {
-        name: "help",
-        description: "Gets informations about commands",
-        usage: "help [command]",
-        handler: helpHandler
-    }
-]
-
 console.log("Welcome to the shell!")
-let shellInput = document.getElementById("shellinput")
-function myFunction() {
-    console.log("a")
+window.onload = function () {
+    document.getElementById("shellinput").value = "";
+}
+
+function run(command) {
+    
+}
+
+function detectEnter(event,input) {
+    let keyCode = event.keyCode ? event.keyCode : e.which;
+    if(keyCode == 13) {
+        run(input)
+        document.getElementById("shellinput").value = "";
+    }
 }
