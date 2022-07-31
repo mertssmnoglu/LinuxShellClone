@@ -12,7 +12,6 @@ body{
     color: whitesmoke;
     overflow: hidden;
     font-size: 25px;
-    
 }
 
 #shellinput{
@@ -25,4 +24,9 @@ body{
 
 #shellinput:focus{
     outline: none;
+}
+
+#uname-hname{
+    color: whitesmoke;
+    font-size: 25px;
 }
