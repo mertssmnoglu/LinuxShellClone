@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+*{
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+body{
+    background-color: black;
+}
+
+#terminal{
+    color: whitesmoke;
+    overflow: hidden;
+    font-size: 25px;
+    
+}
+
+#shellinput{
+    background-color: black;
+    border: 0px;
+    color: whitesmoke;
+    font-size: 25px;
+    width: 1450px;
+}
+
+#shellinput:focus{
+    outline: none;
+}
