@@ -2,8 +2,9 @@ console.log("Welcome to the shell!")
 window.onload = function () {
     this.username = "username"
     this.hostname = "hostname"
+    this.workingDirectory = "~"
     document.getElementById("shellinput").value = "";
-    document.getElementById("uname-hname").innerText = `${username}@${hostname}`
+    document.getElementById("uname-hname").innerText = `${username}@${hostname}:${workingDirectory}$`
 }
 
 const commands = [
