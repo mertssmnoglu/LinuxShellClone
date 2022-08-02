@@ -1,33 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
-*{
-    font-family: 'Ubuntu Mono', monospace;
+* {
+  font-family: "Ubuntu Mono", monospace;
 }
 
-body{
-    background-color: black;
+body {
+  background-color: black;
 }
 
-#terminal{
-    color: whitesmoke;
-    overflow: hidden;
-    font-size: 25px;
+#terminal {
+  color: whitesmoke;
+  overflow: hidden;
+  font-size: 25px;
 }
 
-#shellinput{
-    background-color: black;
-    border: 0px;
-    color: whitesmoke;
-    font-size: 25px;
-    width: 1450px;
+#shellinput {
+  background-color: black;
+  border: 0px;
+  color: whitesmoke;
+  font-size: 25px;
+  width: 1450px;
 }
 
-#shellinput:focus{
-    outline: none;
+#shellinput:focus {
+  outline: none;
 }
 
-#uname-hname{
-    color: greenyellow;
-    font-size: 25px;
-    padding-right: 5px;
+#uname-hname {
+  color: rgb(0, 255, 0);
+  font-size: 25px;
+  padding-right: 5px;
+  user-select: none;
 }
