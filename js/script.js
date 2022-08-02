@@ -19,11 +19,14 @@ const commands = [
 ]
 
 function run(commandInput) {
-    for (const command of commands) {
-        if(command.name == commandInput.value){
-            return command.run()
-        }
+    let input = commandInput.value
+    let command = commands.filter(function (command) {
+        return command.name === input;
+    })
+    if(command === null || command.length === 0) {
+        return console.log(`Command ${input} not found`)
     }
+    command[0].run()
 }
 
 function detectEnter(event,input) {
