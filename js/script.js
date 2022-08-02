@@ -7,6 +7,11 @@ window.onload = function () {
     document.getElementById("uname-hname").innerText = `${username}@${hostname}:${workingDirectory}$`
 }
 
+window.onclick = function() {
+    let input = document.getElementById("shellinput")
+    input.focus()
+}
+
 const commands = [
     {
         name: "clear",
