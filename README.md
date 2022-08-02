@@ -1,7 +1,7 @@
 <h1 align="center">Linux Shell Clone</h1>
-<center>
+<p align="center">
 <img src="./assets/linux_penguin.ico" alt="Penguin">
-</center>
+</p>
 
 ## What is Linux Shell Clone ?
 
