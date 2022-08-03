@@ -38,5 +38,22 @@ function detectEnter(event,input) {
     let keyCode = event.keyCode ? event.keyCode : e.which;
     if(keyCode == 13) {
         run(input)
+        createNewInput(input, {username: 'username', hostname: 'hostname', workingDirectory: '~'});
     }
 }
+
+function createNewInput(old_input, uhw){
+    old_input.disabled = true;
+
+    old_input.setAttribute('value', old_input.value);
+    old_input.setAttribute('id', 'old_input'); //çakışmasın yeni focus ile :D
+    
+    document.getElementById('terminal').innerHTML += `
+        <div>
+        <span id="uname-hname">${uhw.username}@${uhw.hostname}:${uhw.workingDirectory}$</span>
+        <input type="text" class="shellinput" name="shell" id="shellinput" onKeyPress="detectEnter(event, this)">
+        </div>
+    `
+
+    document.getElementById('shellinput').focus();
+}   
