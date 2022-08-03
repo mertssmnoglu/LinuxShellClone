@@ -12,17 +12,6 @@ window.onclick = function() {
     input.focus()
 }
 
-const commands = [
-    {
-        name: "clear",
-        description: "Clears the console",
-        run: function () {
-            document.getElementById("terminal").innerHTML = "";
-            console.log("Cleared the console")
-        }
-    }
-]
-
 function run(commandInput) {
     let input = commandInput.value
     let command = commands.filter(function (command) {
@@ -43,10 +32,10 @@ function detectEnter(event,input) {
 }
 
 function createNewInput(old_input, uhw){
+    // Set the input as old_input to create a new input
     old_input.disabled = true;
-
     old_input.setAttribute('value', old_input.value);
-    old_input.setAttribute('id', 'old_input'); //çakışmasın yeni focus ile :D
+    old_input.setAttribute('id', 'old_input');
     
     document.getElementById('terminal').innerHTML += `
         <div>
