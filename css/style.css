@@ -14,7 +14,7 @@ body {
   font-size: 25px;
 }
 
-#shellinput {
+.shellinput {
   background-color: black;
   border: 0px;
   color: whitesmoke;
@@ -22,7 +22,7 @@ body {
   width: 1450px;
 }
 
-#shellinput:focus {
+.shellinput:focus {
   outline: none;
 }
 
