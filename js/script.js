@@ -43,10 +43,10 @@ function detectEnter(event,input) {
 }
 
 function createNewInput(old_input, uhw){
+    // Set the input as old_input to create a new input
     old_input.disabled = true;
-
     old_input.setAttribute('value', old_input.value);
-    old_input.setAttribute('id', 'old_input'); //çakışmasın yeni focus ile :D
+    old_input.setAttribute('id', 'old_input');
     
     document.getElementById('terminal').innerHTML += `
         <div>
