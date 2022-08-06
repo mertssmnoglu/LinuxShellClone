@@ -1,8 +1,8 @@
 console.log("Welcome to the shell!")
+let username = "username"
+let hostname = "hostname"
+let workingDirectory = "~"
 window.onload = function () {
-    this.username = "username"
-    this.hostname = "hostname"
-    this.workingDirectory = "~"
     document.getElementById("shellinput").value = "";
     document.getElementById("uname-hname").innerText = `${username}@${hostname}:${workingDirectory}$`
 }
@@ -27,7 +27,7 @@ function detectEnter(event,input) {
     let keyCode = event.keyCode ? event.keyCode : e.which;
     if(keyCode == 13) {
         run(input)
-        createNewInput(input, {username: 'username', hostname: 'hostname', workingDirectory: '~'});
+        createNewInput(input, {username: username, hostname: hostname, workingDirectory: workingDirectory});
     }
 }
 
