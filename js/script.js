@@ -13,19 +13,19 @@ window.onclick = function() {
 }
 
 function run(commandInput) {
-    let input = commandInput.value
-    let command = commands.filter(function (command) {
-        return command.name === input;
-    })
-    if(command === null || command.length === 0) {
-        return console.log(`Command ${input} not found`)
+    let params = commandInput.value.split(" ")
+    let command = params[0]
+    if ( findCommandByName(command) == undefined ){
+        return { "status": "Command not found" }
+    } else if (typeof(findCommandByName(command) == "object")){
+        findCommandByName(command).run(params)
+        return { "status": "OK" }
     }
-    command[0].run()
 }
 
 function detectEnter(event,input) {
     let keyCode = event.keyCode ? event.keyCode : e.which;
-    if(keyCode == 13) {
+    if (keyCode == 13) {
         run(input)
         createNewInput(input, {username: username, hostname: hostname, workingDirectory: workingDirectory});
     }
@@ -46,3 +46,13 @@ function createNewInput(old_input, uhw){
 
     document.getElementById('shellinput').focus();
 }   
+
+function findCommandByName(param) {
+    let command = commands.filter(function (command) {
+        return command.name === param;
+    })
+    if(command === null || command.length === 0) {
+        return undefined
+    }
+    return command[0]
+}
